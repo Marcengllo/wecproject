@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:wecproject/reuse_widget/mycolor.dart';
 import 'package:wecproject/reuse_widget/profile_options.dart';
+import 'package:wecproject/reuse_widget/text_profile.dart';
 
 class ProfileMenu extends StatefulWidget {
   const ProfileMenu({super.key});
@@ -12,11 +14,11 @@ class _ProfileMenuState extends State<ProfileMenu> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: backgroundpage,
       appBar: AppBar(
         title: const Text(
           "Profile",
-          style: TextStyle(color: Colors.white),
+          style: TextStyle(color: textcolor),
         ),
         backgroundColor: Colors.blue,
         automaticallyImplyLeading: false,
@@ -30,24 +32,21 @@ class _ProfileMenuState extends State<ProfileMenu> {
               children: [
                 const CircleAvatar(
                   radius: 50,
-                  backgroundImage: NetworkImage('https://example.com/path/to/image.jpg'),
+                  backgroundImage:
+                      NetworkImage('https://example.com/path/to/image.jpg'),
                 ),
                 const SizedBox(height: 10),
-                Text(
-                  "Marcello Rosyi",
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                  ),
+                ReusableText(
+                  text: "Marcello Rosyi",
+                  color: textcolor,
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold, // Menentukan fontWeight
                 ),
                 const SizedBox(height: 5),
-                Text(
-                  "marcello@gmail.com",
-                  style: const TextStyle(
-                    color: Colors.white70,
-                    fontSize: 16,
-                  ),
+                ReusableText(
+                  text: "marcello@gmail.com",
+                  color: textcolor,
+                  fontSize: 16,
                 ),
               ],
             ),
@@ -58,7 +57,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
             child: const Text(
               "Favorite Replay",
               style: TextStyle(
-                color: Colors.white,
+                color: textcolor,
                 fontSize: 18,
                 fontWeight: FontWeight.bold,
               ),
@@ -102,20 +101,17 @@ class _ProfileMenuState extends State<ProfileMenu> {
           ProfileOption(
             title: 'Contact us',
             icon: Icons.arrow_forward_ios,
-            onTap: () {
-            },
+            onTap: () {},
           ),
           ProfileOption(
             title: 'Privacy Policy',
             icon: Icons.arrow_forward_ios,
-            onTap: () {
-            },
+            onTap: () {},
           ),
           ProfileOption(
             title: 'Log Out',
             icon: Icons.logout,
-            onTap: () {
-            },
+            onTap: () {},
           ),
         ],
       ),

@@ -4,6 +4,7 @@ import 'package:wecproject/controllers/dashboard_controller.dart';
 import 'package:wecproject/menu/home_page.dart';
 import 'package:wecproject/menu/klasemen_dart.dart';
 import 'package:wecproject/menu/profile_page.dart';
+import 'package:wecproject/reuse_widget/mycolor.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -30,8 +31,8 @@ class DashboardPage extends StatelessWidget {
               icon: Icon(Icons.person_2_outlined), label: "Profile")
           ],
            backgroundColor: Colors.black,
-          selectedItemColor: Colors.blue, 
-          unselectedItemColor: Colors.white, 
+          selectedItemColor: membiru, 
+          unselectedItemColor: textcolor, 
           type: BottomNavigationBarType.fixed,
         ),
       );

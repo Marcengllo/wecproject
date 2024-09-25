@@ -63,6 +63,15 @@ flutter:
 
   assets: 
     - image/ewc.png
+    - image/poche.png
+    - image/alpine.png
+    - image/peugeot.png
+    - image/ferrari.png
+    - image/oyota.png
+    - image/lamborgini.png
+    - image/issota.png
+    - image/bmw.png
+    - image/Cadillac.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:

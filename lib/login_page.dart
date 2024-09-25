@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:wecproject/reuse_widget/button_login.dart';
+import 'package:wecproject/reuse_widget/mycolor.dart';
 import 'package:wecproject/reuse_widget/text_field_login.dart';
 
 class LoginPage extends StatefulWidget {
@@ -16,7 +17,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: backgroundpage,
       body: Container(
         padding: const EdgeInsets.all(20.0),
         decoration: const BoxDecoration(
@@ -36,7 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: textcolor,
                   ),
                 ),
                 const SizedBox(height: 5),
@@ -75,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
                   },
                   child: const Text(
                     'Forgot Password?',
-                    style: TextStyle(color: Colors.blue),
+                    style: TextStyle(color: membiru),
                   ),
                 ),
               ],
@@ -104,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
       "Error",
       "Email or password is incorrect",
       backgroundColor: Colors.red,
-      colorText: Colors.white,
+      colorText: textcolor,
     );
   }
 }
