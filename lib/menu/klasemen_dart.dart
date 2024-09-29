@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wecproject/datalist/klasmen_data.dart';
-import 'package:wecproject/model/model_klasemen.dart';
 import 'package:wecproject/reuse_widget/mycolor.dart';
 
 class klasemenMenu extends StatefulWidget {

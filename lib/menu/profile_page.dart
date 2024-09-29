@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wecproject/datalist/data_news.dart';
+import 'package:wecproject/reuse_widget/card_info.dart';
 import 'package:wecproject/reuse_widget/mycolor.dart';
 import 'package:wecproject/reuse_widget/profile_options.dart';
 import 'package:wecproject/reuse_widget/text_profile.dart';
@@ -20,7 +22,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
           "Profile",
           style: TextStyle(color: textcolor),
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: membiru,
         automaticallyImplyLeading: false,
         centerTitle: true,
       ),
@@ -32,15 +34,15 @@ class _ProfileMenuState extends State<ProfileMenu> {
               children: [
                 const CircleAvatar(
                   radius: 50,
-                  backgroundImage:
-                      NetworkImage('https://example.com/path/to/image.jpg'),
+                  backgroundImage: NetworkImage(
+                      'https://cdn-4.motorsport.com/images/amp/0k7kbv80/s1000/ayrton-senna-1.jpg'),
                 ),
                 const SizedBox(height: 10),
                 ReusableText(
                   text: "Marcello Rosyi",
                   color: textcolor,
                   fontSize: 24,
-                  fontWeight: FontWeight.bold, // Menentukan fontWeight
+                  fontWeight: FontWeight.bold, 
                 ),
                 const SizedBox(height: 5),
                 ReusableText(
@@ -51,53 +53,14 @@ class _ProfileMenuState extends State<ProfileMenu> {
               ],
             ),
           ),
-          const SizedBox(height: 20),
-          Align(
-            alignment: Alignment.centerLeft,
-            child: const Text(
-              "Favorite Replay",
-              style: TextStyle(
-                color: textcolor,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
+          SizedBox(height: 5,),
+          Padding(
+            padding: const EdgeInsets.all(2),
+            child: Cardinfo(
+              itemcard: itemNews,
+              title: 'Favorite Replay',
             ),
           ),
-          const SizedBox(height: 10),
-          Row(
-            children: [
-              Expanded(
-                child: Card(
-                  color: Colors.grey[400],
-                  child: SizedBox(
-                    height: 100,
-                    child: Center(
-                      child: Text(
-                        "Replay 1",
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Card(
-                  color: Colors.grey[400],
-                  child: SizedBox(
-                    height: 100,
-                    child: Center(
-                      child: Text(
-                        "Replay 2",
-                        style: TextStyle(color: Colors.black),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 20),
           ProfileOption(
             title: 'Contact us',
             icon: Icons.arrow_forward_ios,

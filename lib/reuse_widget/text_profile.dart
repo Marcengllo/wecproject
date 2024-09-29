@@ -4,14 +4,14 @@ class ReusableText extends StatelessWidget {
   final String text;
   final Color color;
   final double fontSize;
-  final FontWeight? fontWeight; // Optional fontWeight
+  final FontWeight? fontWeight;
 
   const ReusableText({
     Key? key,
     required this.text,
     this.color = Colors.black,
     this.fontSize = 16,
-    this.fontWeight, // Bisa tidak disertakan
+    this.fontWeight,
   }) : super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class ReusableText extends StatelessWidget {
       style: TextStyle(
         color: color,
         fontSize: fontSize,
-        fontWeight: fontWeight ?? FontWeight.normal, // Default fontWeight
+        fontWeight: fontWeight ?? FontWeight.normal,
       ),
     );
   }
