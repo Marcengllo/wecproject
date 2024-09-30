@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wecproject/reuse_widget/mycolor.dart';
 
 class ProfileOption extends StatelessWidget {
   final String title;
@@ -14,11 +15,11 @@ class ProfileOption extends StatelessWidget {
         ListTile(
           title: Text(
             title,
-            style: const TextStyle(color: Colors.white),
+            style: const TextStyle(color: textcolor),
           ),
           trailing: Icon(
             icon,
-            color: Colors.white,
+            color: textcolor,
           ),
           onTap: onTap,
         ),
