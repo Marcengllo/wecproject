@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wecproject/reuse_widget/mycolor.dart';
 
 class ReusableTextField extends StatelessWidget {
   final TextEditingController controller;
@@ -29,7 +30,7 @@ class ReusableTextField extends StatelessWidget {
       child: TextField(
         controller: controller,
         obscureText: obscureText,
-        style: const TextStyle(color: Colors.white),
+        style: const TextStyle(color: textcolor),
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: const TextStyle(color: Colors.grey),
@@ -39,7 +40,7 @@ class ReusableTextField extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             borderSide: BorderSide.none,
           ),
-          prefixIcon: Icon(icon, color: Colors.white),
+          prefixIcon: Icon(icon, color: textcolor),
         ),
       ),
     );

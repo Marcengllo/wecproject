@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wecproject/datalist/data_news.dart';
-import 'package:wecproject/datalist/data_replay.dart';
+import 'package:wecproject/datalist/data_history.dart';
 import 'package:wecproject/reuse_widget/card_info.dart';
 import 'package:wecproject/reuse_widget/mycolor.dart';
 import 'package:wecproject/reuse_widget/profile_options.dart';
@@ -58,8 +58,8 @@ class _ProfileMenuState extends State<ProfileMenu> {
           Padding(
             padding: const EdgeInsets.all(2),
             child: Cardinfo(
-              itemcard: itemReplay,
-              title: 'Favorite Replay',
+              itemcard: itemhistory,
+              title: 'History',
             ),
           ),
           ProfileOption(
