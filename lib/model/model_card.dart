@@ -1,4 +1,3 @@
-
 class modelcard {
   final String imagePath;
   final String title;
@@ -10,3 +9,4 @@ class modelcard {
     required this.date,
   });
 }
+

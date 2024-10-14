@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:wecproject/datalist/data_news.dart';
-import 'package:wecproject/datalist/data_history.dart';
+import 'package:get/get.dart';
+import 'package:wecproject/controllers/history_controller.dart';
+import 'package:wecproject/model/model_card.dart';
 import 'package:wecproject/reuse_widget/card_info.dart';
 import 'package:wecproject/reuse_widget/mycolor.dart';
-import 'package:wecproject/reuse_widget/profile_options.dart';
 import 'package:wecproject/reuse_widget/text_profile.dart';
+import 'package:wecproject/reuse_widget/profile_options.dart';
 
 class ProfileMenu extends StatefulWidget {
   const ProfileMenu({super.key});
@@ -14,6 +15,8 @@ class ProfileMenu extends StatefulWidget {
 }
 
 class _ProfileMenuState extends State<ProfileMenu> {
+  final HistoryController historyController = Get.put(HistoryController());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +46,7 @@ class _ProfileMenuState extends State<ProfileMenu> {
                   text: "Marcello Rosyi",
                   color: textcolor,
                   fontSize: 24,
-                  fontWeight: FontWeight.bold, 
+                  fontWeight: FontWeight.bold,
                 ),
                 const SizedBox(height: 5),
                 ReusableText(
@@ -54,14 +57,23 @@ class _ProfileMenuState extends State<ProfileMenu> {
               ],
             ),
           ),
-          SizedBox(height: 5,),
-          Padding(
-            padding: const EdgeInsets.all(2),
-            child: Cardinfo(
-              itemcard: itemhistory,
-              title: 'History',
-            ),
-          ),
+          const SizedBox(height: 20),
+          Obx(() {
+            List<modelcard> historyList = historyController.viewedCards.reversed.take(4).toList();
+            if (historyList.isEmpty) {
+              return Center(
+                child: Text(
+                  "No recently viewed items",
+                  style: TextStyle(color: textcolor, fontSize: 16),
+                ),
+              );
+            }
+            return Cardinfo(
+              itemcard: historyList,
+              title: "Recently Viewed",
+            );
+          }),
+          const SizedBox(height: 10),
           ProfileOption(
             title: 'Contact us',
             icon: Icons.arrow_forward_ios,

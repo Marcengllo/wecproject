@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wecproject/reuse_widget/mycolor.dart';
 
 class ReusableButton extends StatelessWidget {
   final bool isLoading;
@@ -24,10 +25,10 @@ class ReusableButton extends StatelessWidget {
           ),
         ),
         child: isLoading
-            ? const CircularProgressIndicator(color: Colors.white)
+            ? const CircularProgressIndicator(color: textcolor)
             : const Text(
                 'Login',
-                style: TextStyle(fontSize: 18),
+                style: TextStyle(fontSize: 18,color: textcolor),
               ),
       ),
     );

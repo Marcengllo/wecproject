@@ -1,7 +1,7 @@
 class Klasemen {
   final int position;
   final String team;
-  final int points;
+  final String points;
   final String logo;
 
   Klasemen({

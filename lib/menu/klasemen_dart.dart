@@ -35,10 +35,10 @@ class _klasemenMenuState extends State<klasemenMenu> {
               ),
               title: Text(
                 "${item.position}. ${item.team}",
-                style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold,color: textcolor),
+                style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold,color: textcolor),
               ),
               subtitle: Text("${item.points} Pts",
-              style: const TextStyle(color: textcolor),),
+              style: const TextStyle(color: textcolor,fontSize: 13),),
             ),
           );
         },
